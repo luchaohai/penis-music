@@ -49,12 +49,119 @@
 			},
 			{
 				"inputs": [],
+				"name": "getAllListedNFTs",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllOrderIds",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllOrders",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "orderId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "sellAddr",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct NFTMarket.Order[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getExistAllOrder",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "page",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pageSize",
+						"type": "uint256"
+					}
+				],
+				"name": "getOrdersByPage",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "orderId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "sellAddr",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct NFTMarket.Order[]",
+						"name": "",
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -163,9 +270,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"NFTMarket.sol": "NFTMarket"
+			"src/contracts/NFTMarket.sol": "NFTMarket"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -265,12 +372,12 @@
 				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
 			]
 		},
-		"NFTMarket.sol": {
-			"keccak256": "0x571bbd57e046f4682369b61bdf615ee61b351e37055776961c8eb46512112ab4",
+		"src/contracts/NFTMarket.sol": {
+			"keccak256": "0x3ff52ccde0c56dcef257881149f0c21532765d624c0df3a9b60a0e73d7092853",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://44bcae4626884301f3ae6c421cd1672ed096e982d907f38230fa0cef4115d58c",
-				"dweb:/ipfs/QmRwpri8iPX1yu2PrJ9cxLxGa5dEs6JvXLswfa612ewxqd"
+				"bzz-raw://1d081e1b0585addee5ae8744ac665a581e8f58be8542dc673dd5ff22796e0a63",
+				"dweb:/ipfs/QmcQ8eGHBKCPMy7ve3PK49WgKWavXiSmGatzCR2FpXotV5"
 			]
 		}
 	},

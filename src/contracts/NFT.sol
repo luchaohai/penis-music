@@ -20,7 +20,7 @@ contract PenisNFT is ERC721, Ownable {
         uint256[] tokenIds; //存储每个用户的nftid
     }
 
-    constructor() ERC721("MyNFT", "MNFT") Ownable(msg.sender) {
+    constructor() ERC721("PenisNFT", "PNFT") Ownable(msg.sender) {
         _totalSupply = 0;
     }
 
@@ -39,14 +39,6 @@ contract PenisNFT is ERC721, Ownable {
         totalOwn[to]++;
 
         return newTokenId;
-    }
-
-    function setListingStatus(uint256 tokenId, bool isListed) public onlyOwner {
-        require(
-            tokenId <= _totalSupply,
-            "ERC721: operator query for nonexistent token"
-        );
-        _tokenData[tokenId].isListed = isListed;
     }
 
     function getTokenData(
